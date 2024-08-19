@@ -23,7 +23,7 @@ Here are some main requirements we need to respect while working on this project
 
 ## :rocket:  How to clone, compile and execute our shell :
 
-### H:small_orange_diamond: How to clone this repo ?
+### :small_orange_diamond: How to clone this repo ?
 
 If you want to give a try to our project, you are very welcome to clone this repo on your computer, using the command git clone and the link in your terminal.
 
