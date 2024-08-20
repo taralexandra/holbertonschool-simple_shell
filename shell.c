@@ -79,10 +79,6 @@ int main(void)
 		{
 			break;
 		}
-		if (strcmp(line, EXIT_COMMAND) == 0)
-		{
-			break;
-		}
 
 		exec_command(line);
 	}
