@@ -36,10 +36,11 @@ ssize_t read_command(char **line, size_t *len)
   */
 void exec_command(char *line)
 {
-	char *args[2];
+	char *args[3];
 
 	args[0] = line;
-	args[1] = NULL;
+	args[1] = line;
+	args[3] = NULL;
 
 	if (fork() == 0)
 	{
@@ -47,6 +48,7 @@ void exec_command(char *line)
 		{
 			perror(line);
 		}
+		free(line);
 		exit(EXIT_FAILURE);
 	}
 	else
@@ -55,7 +57,6 @@ void exec_command(char *line)
 	}
 }
 
-char *line = NULL;
 
 /**
 * handle_sigint - frees memory even if user ctrl c
@@ -67,7 +68,7 @@ char *line = NULL;
 void handle_sigint(int sig)
 {
 	(void)sig;
-	free(line);
+	free(&line);
 	_exit(0);
 }
 
@@ -81,7 +82,7 @@ void handle_sigint(int sig)
 
 int main(void)
 {
-
+	char *line = NULL;
 	size_t len = 0;
 	ssize_t nread;
 
