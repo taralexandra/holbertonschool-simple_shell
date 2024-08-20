@@ -17,6 +17,7 @@ ssize_t read_command(char **line, size_t *len)
 
 	if (nread == -1)
 	{
+		free(*line);
 		perror("getline");
 		exit(EXIT_FAILURE);
 	}
