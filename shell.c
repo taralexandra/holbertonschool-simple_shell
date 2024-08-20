@@ -54,7 +54,21 @@ void exec_command(char *line)
 	}
 }
 
+char *line = NULL;
 
+/**
+* handle_sigint - frees memory even if user ctrl c
+* @sig: - signal
+* Return: 0
+*
+*/
+
+void handle_sigint(int sig)
+{
+	(void)sig;
+	free(line);
+	_exit(0);
+}
 
 /**
   * main - this is the main function for simple shell.
@@ -66,9 +80,11 @@ void exec_command(char *line)
 
 int main(void)
 {
-	char *line = NULL;
+
 	size_t len = 0;
 	ssize_t nread;
+
+	signal(SIGINT, handle_sigint);
 
 	while (1)
 	{
@@ -79,10 +95,13 @@ int main(void)
 		{
 			break;
 		}
+		if (strcmp (line, EXIT_COMMAND) == 0)
+		{
+			break;
+		}
 
 		exec_command(line);
 	}
-
 
 	free(line);
 	return (0);
