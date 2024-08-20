@@ -14,7 +14,7 @@
   * and before to enter a command.
   */
 
-#define PROMPT "#cisfun$ "
+#define PROMPT "#cisfun "
 
 /**
   * define EXIT_COMMAND - this command "exit" allow to quit the program.
