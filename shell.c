@@ -17,11 +17,6 @@ ssize_t read_command(char **line, size_t *len)
 
 	if (nread == -1)
 	{
-		if (feof(stdin))
-		{
-			printf("\n");
-			return (-1);
-		}
 		perror("getline");
 		exit(EXIT_FAILURE);
 	}
