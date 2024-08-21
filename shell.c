@@ -1,108 +1,49 @@
-#include "main_header.h"
+#include "main.h"
 
 /**
-  * read_command - read the command entered by user.
-  * @line: ptr to the buffer where we stock the command.
-  * @len: ptr to the size of the buffer.
-  * Return: the number of char which are read, or -1
-  * in case of issue.
-  */
-ssize_t read_command(char **line, size_t *len)
-{
-	ssize_t nread;
-
-	printf(PROMPT);
-
-	nread = getline(line, len, stdin);
-
-	if (nread == -1)
-	{
-		free(*line);
-		printf("\n");
-		exit(EXIT_SUCCESS);
-	}
-
-	if ((*line)[nread - 1] == '\n')
-	{
-		(*line)[nread - 1] = '\0';
-	}
-
-	return (nread);
-}
-
-/**
-  * exec_command - this func executes the command entered.
-  * @line: the command to execute.
-  */
-void exec_command(char *line)
-{
-	char *args[3];
-
-	args[0] = line;
-	args[1] = line;
-	args[3] = NULL;
-
-	if (fork() == 0)
-	{
-		if (execve(args[0], args, NULL) == -1)
-		{
-			perror(line);
-		}
-		free(line);
-		exit(EXIT_FAILURE);
-	}
-	else
-	{
-		wait(NULL);
-	}
-}
-
-
-/**
-* handle_sigint - frees memory even if user ctrl c
-* @sig: - signal
-* Return: 0
+* main - Simple Shell, reads input from user, and executes input as command,
+* stops if the user types exit, or when an error occurs while reading input
+* @argc: Argument count
+* @argv: Argument vector
+* @env: Environment variables
 *
+* Return: Always 0
 */
 
-void handle_sigint(int sig)
+int main(int argc, char *argv[], char *env[])
 {
-	(void)sig;
-	free(&line);
-	_exit(0);
-}
 
-/**
-  * main - this is the main function for simple shell.
-  * The prompt will be displayed "#cisfun$"
-  * So the user can enter a command like /bin/ls.
-  * And the command entered will be executed.
-  * Return: 0 in case of success.
-  */
-
-int main(void)
-{
-	char *line = NULL;
 	size_t len = 0;
 	ssize_t nread;
+	char *line = NULL;
 
-	signal(SIGINT, handle_sigint);
+	(void)argc;
+	(void)argv;
 
 	while (1)
 	{
+		printf("C isn't fun ");
 
-		nread = read_command(&line, &len);
+		nread = getline(&line, &len, stdin);
 
 		if (nread == -1)
 		{
-			break;
+			free(line);
+			printf("\n");
+			exit(EXIT_SUCCESS);
 		}
-		if (strcmp (line, EXIT_COMMAND) == 0)
+
+		if (line[nread - 1] == '\n')
+			line[nread - 1] = '\0';
+
+		if (strcmp(line, "exit") == 0)
 		{
+			free(line);
+			line = NULL;
 			break;
 		}
 
-		exec_command(line);
+		execute_command(line, &line, env);
 	}
 
 	free(line);
