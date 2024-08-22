@@ -37,7 +37,7 @@ void execute_command(char *name, char *command, char **line, char **env)
 	}
 	else if (pid == 0)
 	{
-		if (execve(args[0], args, env) == -1)
+		if (execvp(args[0], args, env) == -1)
 		{
 			perror(name);
 			free(*line);
