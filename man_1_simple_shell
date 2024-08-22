@@ -1,0 +1,58 @@
+.TH SIMPLE_SHELL 1 "August 2024" "Version 1.0" "Simple Shell User Manual"
+
+.SH NAME
+simple_shell \- A simple shell to execute commands
+
+.SH SYNOPSIS
+.B simple_shell
+[\fBfile\fP]
+
+.SH DESCRIPTION
+.B simple_shell
+is a program that reads user input, interprets it, and executes it as a command. The shell continues running until the user types \fBexit\fP or an error occurs while reading input.
+
+.SH OPTIONS
+.TP
+\fBfile\fP
+A file containing a list of commands to execute. If a file is provided, the shell executes the commands within the file and then exits.
+
+.SH COMMANDS
+The shell supports the following commands:
+.TP
+\fBexit\fP
+Exits the shell.
+
+.SH USAGE
+Users can input commands directly into the shell. For example:
+.PP
+.EX
+$ ./simple_shell
+($) ls -l
+($) pwd
+($) exit
+.EE
+
+If an unrecognized command is entered, an error will be displayed.
+
+.SH RETURN VALUE
+The program returns 0 on success, or another value on error.
+
+.SH ENVIRONMENT VARIABLES
+.B simple_shell
+uses environment variables to execute commands. The \fIenv\fP array is passed to \fBexecve(2)\fP when executing commands.
+
+.SH FILES
+No specific files are required for the program's execution.
+
+.SH SEE ALSO
+.BR execve (2),
+.BR fork (2),
+.BR wait (2),
+.BR getline (3)
+
+.SH AUTHOR
+Simple Shell was developed by \fITara\fP and \fIXavier\fP as part of a school project.
+
+.SH BUGS
+No known bugs at this time. Please report any bugs to your email address.
+
