@@ -11,5 +11,6 @@
 
 int main(int argc, char *argv[], char *env[]);
 void execute_command(char *name, char *command, char **line, char **env);
+unsigned int _strspn(char *s, char *accept);
 
 #endif

@@ -35,7 +35,7 @@ int main(int argc, char *argv[], char *env[])
 		if (line[nread - 1] == '\n')
 			line[nread - 1] = '\0';
 
-		if (line[0] == '\0' || strspn(line, " \t") == strlen(line))
+		if (line[0] == '\0' || _strspn(line, " \t") == strlen(line))
 			continue;
 
 		if (strcmp(line, "exit") == 0)
