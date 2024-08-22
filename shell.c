@@ -29,7 +29,6 @@ int main(int argc, char *argv[], char *env[])
 		if (nread == -1)
 		{
 			free(line);
-			printf("\n");
 			exit(EXIT_SUCCESS);
 		}
 
