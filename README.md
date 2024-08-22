@@ -64,3 +64,9 @@ Once you tested our program you probably will be looking for the command to use 
 ### :woman_technologist: Meet Tara : 
 
 - :blue_square: LinkedIn : [Access to this account](https://www.linkedin.com/in/tara-alexandra-quartero-a34534177/)
+
+### :laptop: Meet Xavier :
+
+- :blue_square: LinkedIn : [Access to this account](https://www.linkedin.com/in/xavier-sanchez-b09b71311/)
+
+
