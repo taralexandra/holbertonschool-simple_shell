@@ -16,7 +16,6 @@ int main(int argc, char *argv[], char *env[])
 	size_t len = 0;
 	ssize_t nread;
 	char *line = NULL;
-
 	(void)argc;
 
 	while (1)
