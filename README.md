@@ -37,7 +37,7 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
 
 If you want to test our program, you can simply compile and then execute our program with a command like this one :
 
-/bin/ls
+	/bin/ls
 
 ### :small_orange_diamond: How to exit the simple shell program :
 
@@ -53,7 +53,7 @@ Once you tested our program you probably will be looking for the command to use 
 
 In order to read the man page of this project, please use the command below :
 
-man ./man_1_simple_shell
+	man ./man_1_simple_shell
 
 
 ## Exemples (interactive or not) :
