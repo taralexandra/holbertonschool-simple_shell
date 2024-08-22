@@ -31,7 +31,7 @@ If you want to give a try to our project, you are very welcome to clone this rep
 
 You can compile this program using this command :
 
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
+	gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
 
 ### :small_orange_diamond: How to execute the program ?
 
