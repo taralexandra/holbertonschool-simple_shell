@@ -1,6 +1,6 @@
 # README file for the TEAM project Simple Shell :busts_in_silhouette: :ledger:
 
-We are students from the campus of Holberton in Fréjus.
+We are Tara and Xavier, students from the campus of Holberton in Fréjus.
 
 ## :hammer_and_wrench: Requirements of this project :
 
