@@ -45,7 +45,7 @@ Once you tested our program you probably will be looking for the command to use 
 
 - use control + C
 
-## :small_orange_diamond: How to check for memory leaks ? :thinking:
+### :small_orange_diamond: How to check for memory leaks ? :thinking:
 
 à ajouter
 
