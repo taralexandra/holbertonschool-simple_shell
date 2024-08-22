@@ -6,7 +6,7 @@ We are Tara and Xavier, students from the campus of Holberton in Fréjus.
 
 Here are some main requirements we need to respect while working on this project together :
 
-### General requirements :
+### :star: General requirements :
 
 - A README.md file, at the root of the folder of the project is mandatory
 - Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
@@ -16,7 +16,7 @@ Here are some main requirements we need to respect while working on this project
 - Use system calls only when you need to.
 - Only some system calls and functions are allowed.
 
-### About Github :
+### :star: About Github :
 
 - There should be one project repository per group.
 
@@ -44,6 +44,17 @@ If you want to test our program, you can simply compile and then execute our pro
 Once you tested our program you probably will be looking for the command to use in order to quit the program : 
 
 - use control + C
+
+## :small_orange_diamond: How to check for memory leaks ? :thinking:
+
+à ajouter
+
+## :small_blue_diamond: How to use the man page of the Simple Shell project ?
+
+In order to read the man page of this project, please use the command below :
+
+man ./man_1_simple_shell
+
 
 ## Exemples (interactive or not) :
 
