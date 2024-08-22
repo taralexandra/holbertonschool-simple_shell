@@ -16,6 +16,8 @@ void execute_command(char *name, char *command, char **line, char **env)
 	pid_t pid;
 	int status;
 
+        (void)env;
+
 	command_copy = strdup(command);
 	if (command_copy == NULL)
 	{
@@ -37,7 +39,7 @@ void execute_command(char *name, char *command, char **line, char **env)
 	}
 	else if (pid == 0)
 	{
-		if (execve(args[0], args, env) == -1)
+		if (execvp(args[0], args) == -1)
 		{
 			perror(name);
 			free(*line);
