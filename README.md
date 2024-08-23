@@ -66,7 +66,7 @@ In order to read the man page of this project, please use the command below :
 
 ### Non interactive example :
 
-=> add image here !
+![Non interactive mode - Simple Shell - img](non_interactive.png)
 
 ## The Flowchart :
 
