@@ -41,7 +41,7 @@ int main(int argc, char *argv[], char *env[])
 		{
 			free(line);
 			line = NULL;
-			break;
+			exit(2);
 		}
 
 		if (line[0])
@@ -49,5 +49,5 @@ int main(int argc, char *argv[], char *env[])
 	}
 
 	free(line);
-	return (2);
+	return (0);
 }
