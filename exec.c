@@ -16,7 +16,7 @@ void execute_command(char *name, char *command, char **line, char **env)
 	pid_t pid;
 	int status;
 
-        (void)env;
+	(void)env;
 
 	command_copy = strdup(command);
 	if (command_copy == NULL)

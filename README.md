@@ -41,7 +41,7 @@ If you want to test our program, you can simply compile and then execute our pro
 
 ### :small_orange_diamond: How to exit the simple shell program :
 
-Once you tested our program you probably will be looking for the command to use in order to quit the program : 
+Once you tested our program you probably will be looking for the command to use in order to quit the program :
 
 - use control + C
 
@@ -72,7 +72,7 @@ In order to read the man page of this project, please use the command below :
 
 ## :busts_in_silhouette:  About the authors :
 
-### :woman_technologist: Meet Tara : 
+### :woman_technologist: Meet Tara :
 
 - :blue_square: LinkedIn : [Access to this account](https://www.linkedin.com/in/tara-alexandra-quartero-a34534177/)
 
