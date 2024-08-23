@@ -68,10 +68,6 @@ In order to read the man page of this project, please use the command below :
 
 ![Non interactive mode - Simple Shell - img](non_interactive.png)
 
-## The Flowchart :
-
-=> add the flowchart here !
-
 ## :busts_in_silhouette:  About the authors :
 
 ### :woman_technologist: Meet Tara :
