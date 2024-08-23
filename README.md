@@ -44,10 +44,12 @@ If you want to test our program, you can simply compile and then execute our pro
 Once you tested our program you probably will be looking for the command to use in order to quit the program :
 
 - use control + C
+- or exit
+- or ctrl + D
 
 ### :small_orange_diamond: How to check for memory leaks ? :thinking:
 
-à ajouter
+	valgrind + name of the file
 
 ## :small_blue_diamond: How to use the man page of the Simple Shell project ?
 
@@ -60,7 +62,7 @@ In order to read the man page of this project, please use the command below :
 
 ### Interactive example :
 
-=> add image here !
+	![Interactive Mode - Simple Shell - img]()
 
 ### Non interactive example :
 
