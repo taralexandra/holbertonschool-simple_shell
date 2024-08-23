@@ -62,7 +62,7 @@ In order to read the man page of this project, please use the command below :
 
 ### Interactive example :
 
-	![Interactive Mode - Simple Shell - img]()
+	![Interactive Mode - Simple Shell - img](holbertonschool-simple_shell/interactive.png)
 
 ### Non interactive example :
 
